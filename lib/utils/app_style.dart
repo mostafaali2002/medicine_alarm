@@ -41,4 +41,5 @@ abstract class AppStyle {
     fontSize: 20,
     fontWeight: FontWeight.w600,
   );
+  static const kPrimaryColor = 0xffF5F5F5;
 }
