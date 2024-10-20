@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicine_alarm/pages/choose_language_page.dart';
 import 'package:medicine_alarm/pages/splash_page.dart';
 
 void main() {
@@ -11,8 +12,10 @@ class MedicineAlarm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       routes: {
         SplashPage.id: (context) => const SplashPage(),
+        ChooseLanguagePage.id: (context) => const ChooseLanguagePage(),
       },
       initialRoute: SplashPage.id,
     );
