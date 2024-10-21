@@ -19,12 +19,19 @@ abstract class AppStyle {
   static const TextStyle styleMedium21 = TextStyle(
     color: Colors.black,
     fontSize: 21,
+    height: 1.3,
     fontWeight: FontWeight.w500,
   );
   static const TextStyle styleBold20 = TextStyle(
     color: Color(0xff073179),
     fontSize: 20,
     fontWeight: FontWeight.bold,
+  );
+  static const TextStyle styleRegular20WithHeight = TextStyle(
+    color: Color(0xffffffff),
+    fontSize: 20,
+    height: 1.5,
+    fontWeight: FontWeight.normal,
   );
   static const TextStyle styleRegular20 = TextStyle(
     color: Color(0xffffffff),

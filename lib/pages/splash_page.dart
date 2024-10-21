@@ -10,7 +10,7 @@ class SplashPage extends StatelessWidget {
   static const String id = "SplashPage";
   @override
   Widget build(BuildContext context) {
-    Timer(const Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.pushNamed(context, ChooseLanguagePage.id);
     });
     return const Scaffold(

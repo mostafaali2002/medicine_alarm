@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
             const EdgeInsets.only(bottom: 10, top: 10, left: 62, right: 62),
         decoration: BoxDecoration(
           color: Color(colorValue),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(16),
         ),
         child: Text(
           text,
