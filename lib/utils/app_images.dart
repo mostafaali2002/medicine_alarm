@@ -8,7 +8,7 @@ class Assets {
 
   /// Assets for notification
   /// assets/notification.svg
-  static const String notification = "assets/notification.svg";
+  static const String notification = "assets/notifications.png";
 
   /// Assets for takeMedicine
   /// assets/take_medicine.svg

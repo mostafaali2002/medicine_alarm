@@ -6,9 +6,9 @@ abstract class AppStyle {
     fontSize: 28,
     fontWeight: FontWeight.w800,
   );
-  static const TextStyle styleMedium20 = TextStyle(
+  static const TextStyle styleMedium16 = TextStyle(
     color: Color(0xff073179),
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: FontWeight.w500,
   );
   static const TextStyle styleMedium15 = TextStyle(

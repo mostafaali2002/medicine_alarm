@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:medicine_alarm/utils/app_images.dart';
 import 'package:medicine_alarm/utils/app_style.dart';
 import 'package:medicine_alarm/widgets/custom_button.dart';
 import 'package:medicine_alarm/widgets/custom_text_form.dart';
+import 'package:medicine_alarm/widgets/picture_slide.dart';
 
 class LoginEnglishBody extends StatefulWidget {
   const LoginEnglishBody({super.key});
@@ -13,19 +13,23 @@ class LoginEnglishBody extends StatefulWidget {
 
 class _LoginEnglishBodyState extends State<LoginEnglishBody> {
   GlobalKey<FormState> formKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Form(
       key: formKey,
       child: Column(
         children: [
-          Image.asset(Assets.takeMedicine),
+          const PicturesSlide(),
+          const SizedBox(
+            height: 15,
+          ),
           const Text(
-            "With us you will never\nforget take a medicine",
-            style: AppStyle.styleMedium20,
+            "With us you will never forget take a medicine\n  We will remind you  throughout the day",
+            style: AppStyle.styleMedium16,
           ),
           const SizedBox(
-            height: 42,
+            height: 10,
           ),
           CustomTextFormField(
             validator: (value) {
@@ -34,24 +38,11 @@ class _LoginEnglishBodyState extends State<LoginEnglishBody> {
               }
               return null;
             },
-            hint: "Phone Number",
-            preIcon: Icons.phone,
+            hint: "Name",
+            preIcon: Icons.person,
           ),
           const SizedBox(
-            height: 30,
-          ),
-          CustomTextFormField(
-            validator: (value) {
-              if (value!.isEmpty) {
-                return "This Field is Required";
-              }
-              return null;
-            },
-            hint: "Password",
-            preIcon: Icons.lock,
-          ),
-          const SizedBox(
-            height: 47,
+            height: 62,
           ),
           CustomButton(
               text: "Login",
