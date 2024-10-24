@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicine_alarm/pages/all_medicine_page.dart';
 import 'package:medicine_alarm/utils/app_style.dart';
 import 'package:medicine_alarm/widgets/custom_button.dart';
 import 'package:medicine_alarm/widgets/custom_text_form.dart';
@@ -48,7 +49,13 @@ class _LoginEnglishBodyState extends State<LoginEnglishBody> {
               text: "Login",
               colorValue: AppStyle.kSecondryColor,
               onTap: () {
-                if (formKey.currentState!.validate()) {}
+                if (formKey.currentState!.validate()) {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AllMedicinePage(),
+                      ));
+                }
               },
               textStyle: AppStyle.styleRegular20),
         ],
