@@ -21,7 +21,7 @@ class MedicineAlarm extends StatelessWidget {
         LoginEnglishPage.id: (context) => const LoginEnglishPage(),
         AllMedicinePage.id: (context) => const AllMedicinePage(),
       },
-      initialRoute: SplashPage.id,
+      initialRoute: AllMedicinePage.id,
     );
   }
 }
