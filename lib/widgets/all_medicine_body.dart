@@ -1,75 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:medicine_alarm/utils/app_images.dart';
-import 'package:medicine_alarm/utils/app_style.dart';
+import 'package:medicine_alarm/models/medicine_item_model.dart';
+import 'package:medicine_alarm/widgets/medicine_item.dart';
 
-class AllMedicineBody extends StatelessWidget {
+class AllMedicineBody extends StatefulWidget {
   const AllMedicineBody({super.key});
 
   @override
+  State<AllMedicineBody> createState() => _AllMedicineBodyState();
+}
+
+class _AllMedicineBodyState extends State<AllMedicineBody> {
+  @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-          child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: const Color(0xffD9D9D9)),
-              child: Row(
-                children: [
-                  Image.asset(Assets.logo),
-                  const SizedBox(
-                    width: 16,
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "Panadol",
-                        style: AppStyle.styleSemiBold16
-                            .copyWith(color: Colors.black),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        "Every 8 hours",
-                        style: AppStyle.styleSemiBold16,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        "Start: 1:00 am",
-                        style: AppStyle.styleSemiBold16
-                            .copyWith(color: Colors.black),
-                      ),
-                    ],
-                  ),
-                  Expanded(child: SizedBox()),
-                  Column(
-                    children: [
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.edit_square,
-                            size: 30, color: Color(AppStyle.kSecondryColor)),
-                      ),
-                      SizedBox(
-                        height: 40,
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.delete,
-                          size: 32,
-                          color: Color(AppStyle.kSecondryColor),
-                        ),
-                      )
-                    ],
-                  )
-                ],
-              )),
-        ),
-      ],
+    return ListView.builder(
+      itemCount: 10,
+      itemBuilder: (context, index) {
+        return MedicineItem(
+            medicineItemModel: MedicineItemModel(
+                medicineName: "medicineName", hours: "hours", start: "start"));
+      },
     );
   }
 }

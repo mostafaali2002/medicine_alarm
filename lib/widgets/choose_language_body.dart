@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medicine_alarm/pages/login_english_page.dart';
+import 'package:medicine_alarm/pages/all_medicine_page.dart';
 import 'package:medicine_alarm/utils/app_images.dart';
 import 'package:medicine_alarm/utils/app_style.dart';
 import 'package:medicine_alarm/widgets/custom_button.dart';
@@ -26,7 +26,7 @@ class ChooseLanguageBody extends StatelessWidget {
             text: "English",
             textStyle: AppStyle.styleRegular20WithHeight,
             onTap: () {
-              Navigator.pushNamed(context, LoginEnglishPage.id);
+              Navigator.pushNamed(context, AllMedicinePage.id);
             },
           ),
           const SizedBox(

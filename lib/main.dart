@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medicine_alarm/pages/all_medicine_page.dart';
 import 'package:medicine_alarm/pages/choose_language_page.dart';
-import 'package:medicine_alarm/pages/login_english_page.dart';
+import 'package:medicine_alarm/pages/details_english_page.dart';
 import 'package:medicine_alarm/pages/splash_page.dart';
 
 void main() {
@@ -18,10 +18,10 @@ class MedicineAlarm extends StatelessWidget {
       routes: {
         SplashPage.id: (context) => const SplashPage(),
         ChooseLanguagePage.id: (context) => const ChooseLanguagePage(),
-        LoginEnglishPage.id: (context) => const LoginEnglishPage(),
+        DetailsEnglishPage.id: (context) => const DetailsEnglishPage(),
         AllMedicinePage.id: (context) => const AllMedicinePage(),
       },
-      initialRoute: AllMedicinePage.id,
+      initialRoute: SplashPage.id,
     );
   }
 }
